@@ -1,3 +1,4 @@
+// {} Object + Two pointers
 class Queue {
   constructor() {
     // initialize an Object
