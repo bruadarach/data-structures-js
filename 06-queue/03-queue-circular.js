@@ -1,3 +1,4 @@
+// %, -1, capacity, isFull, null
 class CircularQueue {
   constructor(capacity) {
     this.items = new Array(capacity);
