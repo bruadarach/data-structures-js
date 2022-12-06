@@ -3,6 +3,8 @@ class CircularQueue {
     this.items = new Array(capacity);
 
     // two pointers
+    // -1 === 버퍼 공간 생성 & isFull
+    // dequeue를 한번도 하지않고 enqueue를 계속해서 실행하면, front와 rear의 위치는 같아지게 되는 것을 방지하기 위함.
     this.rear = -1; // -1 means not pointing any position in the queue
     this.front = -1; // -1 means not pointing any position in the queue
 
@@ -22,9 +24,13 @@ class CircularQueue {
     return this.currentLength;
   }
 
+  // FIFO
   enqueue(item) {
+    // add end
     if (!this.isFull()) {
+      // if queue has capacity to add an element
       this.rear = (this.rear + 1) % this.capacity;
+      // set the next index pointer : (current index + 1) % size of queue
       this.items[this.rear] = item;
       this.currentLength += 1;
       if (this.front === -1) {
@@ -34,11 +40,13 @@ class CircularQueue {
   }
 
   dequeue() {
+    // remove first
     if (this.isEmpty()) {
       return null;
     }
     const item = this.items[this.front];
     this.items[this.front] = null;
+    // set the next index pointer : (current index + 1) % size of queue
     this.front = (this.front + 1) % this.capacity;
     this.currentLength -= 1;
     if (this.isEmpty()) {
