@@ -46,7 +46,6 @@ class LinkedList {
         listValues += `${curr.value} `;
         curr = curr.next;
       }
-
       console.log(listValues);
     }
   }
