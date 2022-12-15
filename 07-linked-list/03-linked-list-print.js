@@ -38,10 +38,12 @@ class LinkedList {
   print() {
     if (this.isEmpty()) {
       console.log("List is empty");
+      // list exists => travel nodes
     } else {
       let curr = this.head;
       let listValues = "";
 
+      // curr !== null
       while (curr) {
         listValues += `${curr.value} `;
         curr = curr.next;
@@ -59,10 +61,10 @@ list.print(); // List is empty
 
 // prepend
 list.prepend(10);
-list.print(); // 10
+list.print(); // 10 // list has one item
 list.prepend(20);
 list.prepend(30);
-list.print(); // 30 20 10
+list.print(); // 30 20 10 // list has three items
 
 // print
 console.log(list);

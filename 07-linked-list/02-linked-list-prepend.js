@@ -21,13 +21,16 @@ class LinkedList {
   }
 
   prepend(value) {
+    // instantiate the node class
     const node = new Node(value);
 
     if (this.isEmpty()) {
       // no list
+      // duplicated part will be refactored later
       this.head = node;
     } else {
       // list existed
+      // duplicated part will be refactored later
       node.next = this.head;
       this.head = node;
     }
