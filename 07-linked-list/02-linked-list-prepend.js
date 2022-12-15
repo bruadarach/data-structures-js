@@ -1,4 +1,5 @@
 // prepend
+// prepend has a constant time complexity: O(1)
 class Node {
   constructor(value) {
     this.value = value;
