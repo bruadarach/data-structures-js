@@ -1,3 +1,4 @@
+// increasing the size of the array is not the best solution to handle collisions
 class HashTable {
   constructor(size) {
     this.table = new Array(size);
@@ -86,3 +87,6 @@ table.display();
 table.set("tep", "collision happened because of charCodeAt!");
 table.display();
 // 29 collision happened because of charCodeAt!
+
+table.remove("tep");
+table.display();
