@@ -39,3 +39,23 @@
   - BST stores the data that can be compared and sortable.
     - Every node to the **left** of a parent node is **always less** than the parent.
     - Every node to the **right** of a parent node is **always greater** than the parent.
+
+# `Big O` of BST
+
+### Time Complexity
+
+As the number of BST nodes grows, the best and average case is,
+
+- **Insertion - O(log N)**
+- **Searching - O(log N)**
+
+Only increase one more step in spite of the double number of nodes
+
+> ⇒ NOT Guaranteed!
+
+- The worst case is not guaranteed with **`O(log N)`**
+- There are some binary search trees configurations that are very slow.
+  - e.g) one-sided binary search tree ⇒ `O(n)`
+  - Solution
+    - Don’t use binary tree or BST.
+    - Could rewrite the BST, selecting a different root (e.g. 34), and restructure the entire tree.
