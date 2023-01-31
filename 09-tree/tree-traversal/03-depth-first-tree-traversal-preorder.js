@@ -89,7 +89,7 @@ class BinarySearchTree {
     //let current = this.root;
 
     function traverse(node) {
-      data.push(node.value);
+      data.push(node.value); // 10 // 6 // 3 // 8 // 15 // 20
       if (node.left) traverse(node.left);
       if (node.right) traverse(node.right);
     }
