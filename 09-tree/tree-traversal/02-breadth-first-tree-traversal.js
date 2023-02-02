@@ -1,3 +1,5 @@
+// #queue #dequeue #push #shift
+
 class Node {
   constructor(value) {
     this.value = value;
